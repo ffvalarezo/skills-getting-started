@@ -1,84 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mergington High School Activities</title>
-    <link rel="stylesheet" href="styles.css" />
-    <style>
-      /* Participants section styling */
-      .participants-section {
-        background: #f8f9fa;
-        border-radius: 6px;
-        padding: 0.5em 1em;
-        margin-top: 0.5em;
-        margin-bottom: 0.5em;
-      }
-      .participants-section ul {
-        margin: 0.3em 0 0.3em 1.2em;
-        padding: 0;
-        list-style-type: disc;
-        color: #333;
-      }
-      .participants-section li {
-        font-size: 0.97em;
-        margin-bottom: 0.2em;
-      }
-      .participants-section em {
-        color: #888;
-        font-size: 0.95em;
-      }
-    </style>
-  </head>
-  <body>
-    <header>
-      <h1>Mergington High School</h1>
-      <h2>Extracurricular Activities</h2>
-    </header>
 
-    <main>
-      <section id="activities-container">
-        <h3>Available Activities</h3>
-        <div id="activities-list">
-          <!-- Activities will be loaded here -->
-          <p>Loading activities...</p>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mergington High School Activities</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Participants section styling */
+    .participants-section {
+      background: #f8f9fa;
+      border-radius: 6px;
+      padding: 0.5em 1em;
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+    }
+
+    .participants-section ul {
+      margin: 0.3em 0 0.3em 1.2em;
+      padding: 0;
+      list-style-type: disc;
+      color: #333;
+    }
+
+    .participants-section li {
+      font-size: 0.97em;
+      margin-bottom: 0.2em;
+    }
+
+    .participants-section em {
+      color: #888;
+      font-size: 0.95em;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Mergington High School</h1>
+    <h2>Extracurricular Activities</h2>
+  </header>
+
+  <main>
+    <section id="activities-container">
+      <h3>Available Activities</h3>
+      <div id="activities-list">
+        <!-- Activities will be loaded here -->
+        <p>Loading activities...</p>
+      </div>
+    </section>
+
+    <section id="signup-container">
+      <h3>Sign Up for an Activity</h3>
+      <form id="signup-form">
+        <div class="form-group">
+          <label for="email">Student Email:</label>
+          <input type="email" id="email" required placeholder="your-email@mergington.edu" />
         </div>
-      </section>
+        <div class="form-group">
+          <label for="activity">Select Activity:</label>
+          <select id="activity" required>
+            <option value="">-- Select an activity --</option>
+            <!-- Activity options will be loaded here -->
+          </select>
+        </div>
+        <button type="submit">Sign Up</button>
+      </form>
+      <div id="message" class="hidden"></div>
+    </section>
+  </main>
 
-      <section id="signup-container">
-        <h3>Sign Up for an Activity</h3>
-        <form id="signup-form">
-          <div class="form-group">
-            <label for="email">Student Email:</label>
-            <input type="email" id="email" required placeholder="your-email@mergington.edu" />
-          </div>
-          <div class="form-group">
-            <label for="activity">Select Activity:</label>
-            <select id="activity" required>
-              <option value="">-- Select an activity --</option>
-              <!-- Activity options will be loaded here -->
-            </select>
-          </div>
-          <button type="submit">Sign Up</button>
-        </form>
-        <div id="message" class="hidden"></div>
-      </section>
+  <footer>
+    <p>&copy; 2023 Mergington High School</p>
+  </footer>
 
-      <section class="participants-section">
-        <h3>Participants List</h3>
-        <ul>
-          <!-- Participants will be listed here -->
-          <li>John Doe - Soccer</li>
-          <li>Jane Smith - Basketball</li>
-          <li>Emily Johnson - Drama Club</li>
-        </ul>
-      </section>
-    </main>
+  <script src="app.js"></script>
+</body>
 
-    <footer>
-      <p>&copy; 2023 Mergington High School</p>
-    </footer>
-
-    <script src="app.js"></script>
-  </body>
 </html>
